@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Envelope from "@/components/scenes/Envelope";
 import LetterView from "@/components/scenes/LetterView";
 import SurpriseMenu from "@/components/scenes/SurpriseMenu";
-import { MemoriesPlayer } from "@/components/scenes/surprises/MemoriesPlayer";
+import VideoSurprise from "@/components/scenes/surprises/VideoSurprise";
 import GiftBox from "@/components/scenes/surprises/GiftBox";
 import Proposal from "@/components/scenes/Proposal";
 import Ending from "@/components/scenes/Ending";
@@ -141,7 +141,7 @@ export default function Home() {
             exit={{ opacity: 0 }}
             className="z-50"
           >
-            <MemoriesPlayer onNext={() => setView("MENU")} />
+            <VideoSurprise onNext={() => setView("MENU")} />
           </motion.div>
         )}
 

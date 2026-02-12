@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { storyChapters } from "@/data/story";
-import { MemoriesPlayer } from "@/components/scenes/surprises/MemoriesPlayer";
+import VideoSurprise from "@/components/scenes/surprises/VideoSurprise";
 import VintageLetter from "@/components/scenes/surprises/VintageLetter";
 import GiftBox from "@/components/scenes/surprises/GiftBox";
 import ForeverCountdown from "@/components/scenes/Countdown";
@@ -102,7 +102,7 @@ export default function StoryBook({ onEnding }: StoryBookProps) {
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
                                     </div>
                                 ) : chapter.type === "surprise-vhs" ? (
-                                    <MemoriesPlayer onNext={handleNext} />
+                                    <VideoSurprise onNext={handleNext} />
                                 ) : chapter.type === "surprise-letter" ? (
                                     <VintageLetter onNext={handleNext} />
                                 ) : chapter.type === "surprise-gift" ? (
